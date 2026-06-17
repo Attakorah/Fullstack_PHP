@@ -59,7 +59,6 @@ const cartCount = document.querySelector("[data-cart-count]");
 const cartTotal = document.querySelector("[data-cart-total]");
 const cartOverlay = document.querySelector("[data-cart-overlay]");
 const checkoutForm = document.querySelector("[data-checkout-form]");
-const cartNote = document.querySelector("[data-cart-note]");
 const userFields = document.querySelectorAll("[data-user-field]");
 const summaryModal = document.querySelector("[data-summary-modal]");
 const summaryMessage = document.querySelector("[data-summary-message]");
@@ -100,6 +99,10 @@ function updateCartBadge() {
 
 function updateCartTotal() {
   cartTotal.textContent = formatMoney(getCartTotal());
+}
+
+function showNotification(message) {
+  window.alert(message);
 }
 
 function updateCheckoutButton() {
@@ -249,15 +252,26 @@ function toggleCartProduct(productId) {
 }
 
 function updateQuantity(productId, direction) {
-  cart = cart
-    .map((product) => {
-      if (product.id !== productId) {
-        return product;
-      }
+  const product = cart.find((item) => item.id === productId);
 
-      return { ...product, quantity: product.quantity + direction };
-    })
-    .filter((product) => product.quantity > 0);
+  if (!product) {
+    return;
+  }
+
+  const newQuantity = product.quantity + direction;
+
+  if (newQuantity < 1) {
+    showNotification(`Select "Remove" to delete ${product.name} from your cart.`);
+    return;
+  }
+
+  cart = cart.map((item) => {
+    if (item.id !== productId) {
+      return item;
+    }
+
+    return { ...item, quantity: newQuantity };
+  });
 
   saveCart();
   renderCart();
@@ -364,11 +378,11 @@ function startPaystackCheckout(customer) {
       cart = [];
       saveCart();
       renderCart();
-      cartNote.textContent = `Payment successful. Reference: ${response.reference}`;
+      showNotification(`Payment successful. Reference: ${response.reference}`);
       openSummaryModal(purchase);
     },
     onClose: () => {
-      cartNote.textContent = "Payment cancelled. Your cart is still saved.";
+      showNotification("Payment cancelled. Your cart is still saved.");
     },
   });
 
@@ -379,7 +393,7 @@ function canLaunchPaystack() {
   const blocker = getPaystackBlocker();
 
   if (blocker) {
-    cartNote.textContent = blocker;
+    showNotification(blocker);
     return false;
   }
 
@@ -438,7 +452,7 @@ checkoutForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
   if (!validateUserDetails()) {
-    cartNote.textContent = "Please correct your details before checking out.";
+    showNotification("Please correct your details before checking out.");
     return;
   }
 

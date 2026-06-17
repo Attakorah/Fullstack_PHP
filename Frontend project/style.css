@@ -463,7 +463,7 @@ h1 {
 
 .checkout-form {
     display: grid;
-    grid-template-rows: minmax(0, 2fr) 1fr auto auto;
+    grid-template-rows: minmax(0, 3fr) auto auto auto;
     min-height: 0;
     flex: 1;
 }
@@ -475,6 +475,8 @@ h1 {
 
 .cart-section--items {
     min-height: 0;
+    display: flex;
+    flex-direction: column;
     overflow-y: auto;
     padding-bottom: 12px;
     scrollbar-width: thin;
@@ -740,13 +742,6 @@ h1 {
 
 .secondary-button:hover {
     border-color: var(--mint);
-}
-
-.cart-note {
-    margin: 0;
-    color: var(--muted);
-    font-size: 0.82rem;
-    line-height: 1.45;
 }
 
 @media (max-width: 920px) {
