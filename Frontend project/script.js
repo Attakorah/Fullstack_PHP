@@ -157,8 +157,8 @@ function validateField(field) {
 
     if (!/^\+?[\d\s-]+$/.test(value)) {
       message = "Use only numbers, spaces, hyphens, or a leading plus.";
-    } else if (digitsOnly.length < 10 || digitsOnly.length > 15) {
-      message = "Phone number must be 10 to 15 digits.";
+    } else if (digitsOnly.length < 10 || digitsOnly.length > 12) {
+      message = "Phone number must be 10 to 12 digits.";
     }
   }
 
