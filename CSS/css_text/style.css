@@ -1,0 +1,47 @@
+#color {
+	white-space: normal;
+	color: red; /* name of the color */
+
+	/* color: #ff0000; HEX value; */
+
+	/* color: rgb(25,0,0); rgb value */
+}
+
+#left {
+	white-space: pre;
+	/*direction: ltr;*/
+	/*word-spacing: 15px;*/
+	/*letter-spacing: 15px;*/
+	text-indent: 20px;
+}
+
+#right {
+	white-space: nowrap;
+	/*direction: rtl;*/
+	/*word-spacing: 50px;*/
+	/*letter-spacing: 50px;*/
+	text-indent: 70px;
+}
+
+#left-heading {
+	text-align: left;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
+#center-heading {
+	text-align: center;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+
+#right-heading {
+	text-align: right;
+	text-decoration: overline;
+	text-transform: lowercase;
+}
+
+#no-align {
+	text-decoration: line-through;
+	text-shadow: 5px 5px red;
+}

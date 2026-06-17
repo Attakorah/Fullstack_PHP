@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMS Gadgets | Smart Tech for Africa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://js.paystack.co/v2/inline.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="#" aria-label="EMS Gadgets home">
+            <img src="Project Files/Images/EMS.svg" alt="">
+            <span>EMS Gadgets</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Primary navigation">
+            <a href="#intro">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Shop</a>
+        </nav>
+
+        <button class="icon-button cart-trigger" type="button" aria-label="Open cart" data-open-cart>
+            <i data-lucide="shopping-bag"></i>
+            <span class="cart-count" data-cart-count>0</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero" id="intro">
+            <div class="hero-copy">
+                <p class="eyebrow">Welcome to EMS Gadgets</p>
+                <h1>Smart tech for Africa's always-on millennials.</h1>
+                <p class="hero-text">EMS Gadgets is a simple online shop for stylish, work-ready, and everyday tech accessories. Browse the collection, add products to your cart, and checkout securely with Paystack.</p>
+                <div class="hero-actions">
+                    <a class="primary-button" href="#products">Shop gadgets</a>
+                    <button class="ghost-button" type="button" data-open-cart>
+                        <i data-lucide="shopping-cart"></i>
+                        View cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-media" aria-hidden="true">
+                <img src="Project Files/Images/heroImage.png" alt="">
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="about-copy">
+                <p class="eyebrow">About EMS</p>
+                <h2>Useful gadgets for modern African lifestyles.</h2>
+                <p>EMS Gadgets helps young professionals, students, creators, and everyday tech lovers find reliable accessories without a complicated shopping experience. The website focuses on portable gadgets that fit busy city life, remote work, content creation, travel, and entertainment.</p>
+            </div>
+
+            <div class="about-points" aria-label="Store highlights">
+                <article>
+                    <i data-lucide="truck"></i>
+                    <h3>Fast Delivery</h3>
+                    <p>Designed for quick ordering and smooth delivery across supported African cities.</p>
+                </article>
+                <article>
+                    <i data-lucide="shield-check"></i>
+                    <h3>Reliable Picks</h3>
+                    <p>Products are selected for everyday use, from power backup to audio and work setups.</p>
+                </article>
+                <article>
+                    <i data-lucide="credit-card"></i>
+                    <h3>Secure Payment</h3>
+                    <p>Paystack checkout makes online payment familiar, fast, and secure.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="products-section" id="products">
+            <div class="section-heading">
+                <p class="eyebrow">Our gadgets</p>
+                <h2>Shop products available on EMS Gadgets</h2>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card" data-product-id="samsung-tv">
+                    <div class="product-image">
+                        <img src="Project Files/Images/product1.png" alt="Samsung TV">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Display</p>
+                        <h3>Samsung TV</h3>
+                        <p class="product-description">A clean smart TV setup for movies, gaming, and streaming at home.</p>
+                        <div class="product-footer">
+                            <strong>GHS 4,800</strong>
+                            <button class="add-button" type="button" data-add-to-cart="samsung-tv">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-product-id="pixel-4a">
+                    <div class="product-image">
+                        <img src="Project Files/Images/product2.png" alt="Pixel 4a">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Phone</p>
+                        <h3>Pixel 4a</h3>
+                        <p class="product-description">A compact Android phone with a sharp camera and smooth everyday performance.</p>
+                        <div class="product-footer">
+                            <strong>GHS 2,400</strong>
+                            <button class="add-button" type="button" data-add-to-cart="pixel-4a">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-product-id="ps-5">
+                    <div class="product-image">
+                        <img src="Project Files/Images/product3.png" alt="PS 5">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Gaming</p>
+                        <h3>PS 5</h3>
+                        <p class="product-description">A next-generation PlayStation console for immersive gaming and entertainment.</p>
+                        <div class="product-footer">
+                            <strong>GHS 6,900</strong>
+                            <button class="add-button" type="button" data-add-to-cart="ps-5">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-product-id="macbook-air">
+                    <div class="product-image">
+                        <img src="Project Files/Images/product4.png" alt="Macbook Air">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Laptop</p>
+                        <h3>Macbook Air</h3>
+                        <p class="product-description">A lightweight laptop for school, work, design, browsing, and productivity.</p>
+                        <div class="product-footer">
+                            <strong>GHS 8,500</strong>
+                            <button class="add-button" type="button" data-add-to-cart="macbook-air">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-product-id="apple-watch">
+                    <div class="product-image">
+                        <img src="Project Files/Images/product5.png" alt="Apple Watch">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Wearable</p>
+                        <h3>Apple Watch</h3>
+                        <p class="product-description">A smartwatch for fitness tracking, notifications, calls, and daily planning.</p>
+                        <div class="product-footer">
+                            <strong>GHS 3,300</strong>
+                            <button class="add-button" type="button" data-add-to-cart="apple-watch">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-product-id="air-pods">
+                    <div class="product-image">
+                        <img src="Project Files/Images/product6.png" alt="Air Pods">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Audio</p>
+                        <h3>Air Pods</h3>
+                        <p class="product-description">Wireless earbuds for calls, music, podcasts, and travel-friendly listening.</p>
+                        <div class="product-footer">
+                            <strong>GHS 1,200</strong>
+                            <button class="add-button" type="button" data-add-to-cart="air-pods">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand" href="#intro" aria-label="EMS Gadgets home">
+            <img src="Project Files/Images/EMS.svg" alt="">
+            <span>EMS Gadgets</span>
+        </a>
+        <p>Smart gadget shopping for millennials in Africa.</p>
+    </footer>
+
+    <aside class="cart-panel" data-cart-panel aria-hidden="true" aria-label="Shopping cart">
+        <div class="cart-panel__header">
+            <div>
+                <p class="eyebrow">Your cart</p>
+                <h2>Order summary</h2>
+            </div>
+            <button class="icon-button" type="button" aria-label="Close cart" data-close-cart>
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+
+        <form class="checkout-form" data-checkout-form>
+            <section class="cart-section cart-section--items" aria-labelledby="cart-items-title">
+                <h3 id="cart-items-title">Items</h3>
+                <div class="cart-items" data-cart-items></div>
+            </section>
+
+            <section class="cart-section cart-section--user" aria-labelledby="cart-user-title">
+                <h3 id="cart-user-title">User Details</h3>
+                <div class="form-field">
+                    <label for="customer-name">Full name</label>
+                    <input id="customer-name" name="name" type="text" placeholder="Your full name" autocomplete="name" required data-user-field>
+                    <small data-error-for="name"></small>
+                </div>
+                <div class="form-field">
+                    <label for="customer-email">Email for receipt</label>
+                    <input id="customer-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required data-user-field>
+                    <small data-error-for="email"></small>
+                </div>
+                <div class="form-field">
+                    <label for="customer-phone">Phone number</label>
+                    <input id="customer-phone" name="phone" type="tel" placeholder="0241234567" autocomplete="tel" required data-user-field>
+                    <small data-error-for="phone"></small>
+                </div>
+            </section>
+
+            <section class="cart-section cart-section--total" aria-labelledby="cart-total-title">
+                <h3 id="cart-total-title">Total Amount</h3>
+                <div class="cart-total">
+                    <span>Total</span>
+                    <strong data-cart-total>GHS 0</strong>
+                </div>
+            </section>
+
+            <section class="cart-section cart-section--actions" aria-labelledby="cart-actions-title">
+                <h3 id="cart-actions-title">Actions</h3>
+                <button class="pay-button" type="submit">
+                    <i data-lucide="lock"></i>
+                    Checkout
+                </button>
+                <button class="secondary-button" type="button" data-close-cart>Continue Shopping</button>
+                <p class="cart-note" data-cart-note>Use your real Paystack public key in script.js before accepting live payments.</p>
+            </section>
+        </form>
+    </aside>
+
+    <div class="cart-overlay" data-cart-overlay></div>
+
+    <section class="summary-modal" data-summary-modal aria-hidden="true" aria-labelledby="summary-title" role="dialog">
+        <div class="summary-card">
+            <div class="summary-icon">
+                <i data-lucide="check"></i>
+            </div>
+            <h2 id="summary-title">Purchase Successful</h2>
+            <p data-summary-message>Your order has been completed successfully.</p>
+            <div class="summary-items" data-summary-items></div>
+            <button class="primary-button" type="button" data-summary-ok>Ok</button>
+        </div>
+    </section>
+
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+#first {
+	font-family: Cambria,Cochin,Georgia,Times,"Times New Roman",serif;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+}
+
+#second {
+	font-family: "Segeo UI",Tahoma,Geneva,Verdana,sans-serif;
+	font-size: 2em;
+	font-style: italic;
+	font-weight: bold;
+	font-variant: small-caps;
+}
+
+#third {
+	font-family: "Lucida Console",Monaco,monospace;
+	font-style: oblique;
+}
+
+#control {
+	font-style: italic;
+	font-variant: normal;
+	font-weight: bold;
+	font: normal small-caps normal 40px serif;
+}
+/*Style rules for the system font demonstration*/
+#caption {
+	font:caption;
+}
+
+#icon {
+	font: icon;
+}
+
+#menu {
+	font: menu;
+}
+
+#message-box {
+	font: message-box;
+}
+
+#small-caption {
+	font: small-caption;
+}
+
+#status-bar {
+	font: status-bar;
+}
