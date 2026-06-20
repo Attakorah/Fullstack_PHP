@@ -20,7 +20,25 @@
 //    console.log(item);
 //}
 
-var paraOne = document.querySelector('p');
-var paraTwo = document.getElementById('second');
+//var paraOne = document.querySelector('p');
+//var paraTwo = document.getElementById('second');
 
-console.log(paraTwo.className);
+//paraOne.id = "initial";
+//paraTwo.className = 'pText';
+
+//console.log(paraTwo);
+
+//var mainEl = document.getElementById('userDiv');
+
+/** 
+var para1 = document.getElementById('name');
+para1.style.color = 'red';
+para1.style.backgroundColor = 'green';
+*/
+
+
+var para1 = document.getElementById('name');
+para1.innerHTML = "Atta_Kay";
+
+
+console.log(para1.innerHTML);
