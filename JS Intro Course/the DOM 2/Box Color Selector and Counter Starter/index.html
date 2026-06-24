@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box Color Selector and Counter</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Square Box</h2>
+        <div class="box" id="squareBox">
+            <p>No of Boxes:</p>
+            <h3 id="counter"></h3>
+        </div>
+        <div class="boxColorsWrapper">
+            <select class="boxColors" id="squareColors" onchange="colorSelector()">
+                <option value="">Select a Color</option>
+                <option value="red">Red</option>
+                <option value="teal">Teal</option>
+                <option value="orange">Orange</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="purple">Purple</option>
+            </select>
+        </div>
+        <div class="boxColorsWrapper">
+            <button onclick="decrement()">-</button>
+            <button onclick="increment()">+</button>
+        </div>
+        <div class="boxColorsWrapper">
+            <button onclick="getSummary()">Get Summary</button>
+            <p id="summary"></p>
+        </div>
+    </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
