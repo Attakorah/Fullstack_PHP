@@ -1,0 +1,15 @@
+h1 {
+	color: red;
+}
+
+#heading {
+	color: blue;
+}
+
+.head-3 {
+	color: green;
+}
+
+* {
+	font-size: 50px;
+}

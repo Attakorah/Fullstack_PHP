@@ -1,0 +1,23 @@
+body {
+	background-color: lightgray;
+}
+
+div {
+	
+}
+
+.bg-image {
+	width: 60%;
+	margin: auto;
+	font-size: 20px;
+	border: 50px dashed;
+	padding: 50px;
+	background-image: url("css.png");
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-attachment: scroll;
+	/*background-size: contain;*/
+	background-size: 100% 100%;
+	background-origin: border-box;
+	background-clip: content-box;
+}

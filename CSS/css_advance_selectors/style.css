@@ -1,0 +1,57 @@
+.nav::before {
+	content: "I am here thanks to a pseudo element";
+	display: block;
+	font-size: 30px;
+	color: purple;
+}
+
+a:link {
+	color: red;
+}
+
+a:visited {
+	color: green;
+}
+
+a:hover {
+	font-size: 30px;
+	background-color: black;
+	color: white;
+}
+
+a:active {
+	font-size: 25px;
+}
+
+p::first-line {
+	font-size: 40px;
+}
+
+p::first-letter {
+	font-style: italic;
+	font-size: 50px;
+	text-transform: lowercase;
+}
+
+p:hover {
+	text-align: right;
+}
+div p:hover {
+	color: red;
+}
+
+div > p {
+	background-color: blue;
+}
+
+.upper + p {
+	text-transform: uppercase;
+}
+
+.top ~ p {
+	text-decoration: line-through ;
+}
+
+div[class="nav"] {
+	margin: 0 50px;
+}
