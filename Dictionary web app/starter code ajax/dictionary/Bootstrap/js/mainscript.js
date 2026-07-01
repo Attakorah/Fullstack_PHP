@@ -1,10 +1,10 @@
 function submitSearchAjax() {
-	var xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveObject("Microsoft.XMLHTTP");
+	var xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
 	xmlhttp.onreadystatechange = function(){
 		//console.log(this.responseText);
 		if (this.readyState === 4 && this.status === 200) {
-			var result = JSON.parse(this.responseTest);
-			if (result.success=="true") {
+			var result = JSON.parse(this.responseText);
+			if (result.success === "true") {
 				document.getElementById('search').value = result.nameOfWord;
 				document.getElementById('searchResult').innerHTML = '<div class="row">'+
 																		'<div class="col-md-8 col-sm-8">'+
@@ -27,7 +27,7 @@ function submitSearchAjax() {
 				document.getElementById("searchImage").style.display="none";
 				document.getElementById("searchMessage").innerHTML="";
 				document.getElementById("searchMessage").style.display="none";
-			} else if(result.failure=="false"){
+			} else if (result.failure === "false" || result.failure === false) {
 				document.getElementById("searchImage").style.display="none";
 				document.getElementById("searchMessage").innerHTML='<strong>Danger!</strong>'+result.noResult;
 				document.getElementById("searchMessage").style.display="block";
@@ -37,12 +37,12 @@ function submitSearchAjax() {
 				document.getElementById("searchMessage").style.display="none";
 				document.getElementById("searchMessage").innerHTML="";
 				document.getElementById("searchResult").innerHTML="";
-				document.getElementById("searchImage").style.display='<div class=""row>'+'<img src="img/search.jpg" class="col-md-6 col-sm-6" width="400" id="searchImage" style="margin-bottom:50px;">'+'</div>';
+				document.getElementById("searchImage").style.display = "block";
 			}
 		}
 	}
-	var searchWord = document.getElementById("search").value;
-	xmlhttp.open("POST","config/wordSearch.php");
+	var searchWord = document.getElementById("search").value.trim();
+	xmlhttp.open("POST","config/wordSearch.php", true);
 	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	xmlhttp.send("search="+searchWord);
+	xmlhttp.send("search=" + encodeURIComponent(searchWord));
 }

@@ -14,6 +14,7 @@
 				$nameOfWord = $row['name'];
 			}
 			$_SESSION['nameOfWord'] = $nameOfWord;
+			$_SESSION['nameOFWord'] = $nameOfWord;
 			$_SESSION['meaningOfWord'] = $meaningOfWord;
 			$data['searchResult'] = $meaningOfWord;
 			$data['success'] = "true";
