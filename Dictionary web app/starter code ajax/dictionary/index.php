@@ -1,3 +1,6 @@
+<?php 
+  session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -304,22 +307,28 @@
           <form>
              <div class="col-md-8 col-sm-8">
               <div class="form-group">
-               <input type="text" name="search" id="search" class="form-control"  value="" placeholder="Search meaning of any word">                  
+               <input type="text" name="search" id="search" class="form-control"  value="<?php echo isset($_SESSION['nameOFWord']) ? $_SESSION['nameOFWord'] : ""; ?>" placeholder="Search meaning of any word">                  
               </div>
              </div>
              <div class="col-md-4 col-sm-4">
               <div class="form-group">
-               <button type="button"  class="btn btn-warning btn-md" id="submitButton" style="font-weight:bold;font-size:16px" >Search</button>        
+               <button type="button"  class="btn btn-warning btn-md" id="submitButton" style="font-weight:bold;font-size:16px" onclick="submitSearchAjax()">Search</button>        
               </div> 
              </div>              
           </form>
          </div>
      </div>
+
+     <div class=""row>
+      <img src="img/search.jpg" class="col-md-6 col-sm-6" width="400" id="searchImage" style="margin-bottom:50px;">
+    </div>
      <div id="searchResult"  class="col-md-6 col-sm-6 well" style="padding-top:30px;padding-bottom:20px;display:none"></div>
      <div class="col-md-6 col-sm-6 alert alert-danger" id="searchMessage" style="padding-top:20px;display:none"></div>
     </div>
+
     <span class="footer">
       <p style="margin-top:15px;font-family:monospace">All right reserved @Ustacky <?php echo date('Y') ?></p>
     </span>
+    <script src="Bootstrap/js/mainscript.js"></script>
   </body>
 </html>
